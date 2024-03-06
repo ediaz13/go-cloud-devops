@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"os"
+)
 
-func main()  {
-	fmt.Print("Hello World")
+func main() {
+	args := os.Args
+	fmt.Printf("Hello World\nos.Args: %v\nArguments: %v\n", args, args[1:len(args)])
 }
